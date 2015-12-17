@@ -33,9 +33,13 @@ h3 { font-size:.25em; margin:1em 50px; }
 h3, h3 a { color:#6b778d; }
 h3 img { margin:0 3px; }
 .cloud { position:absolute; display:block; }
+
 .puff { position:absolute; display:block; width:25px; height:15px; background:white; opacity:.05; filter:alpha(opacity=5);}
+
 #title { font-size: 75px; position:relative; /*top:30%; */ width:100%; height:322px; /*margin-top:-180px; */ margin-top: 5%; text-align:center; z-index:10; font-family: 'Source Code Pro';}
+
 #grid-table { /*position: relative; */ position: absolute; margin-left: 20%; margin-right: auto; width: 60%; /*top: 110%; */ /*width: 100%; */height: 400px; margin-top: 220px; text-align: center; z-index:10;}
+
 </style>
 <script>
 function randomInt(min, max) {
@@ -82,11 +86,11 @@ function addCloud(randomLeft) {
 
 	if (Math.random() < cloudiness) {
 		newCloud = {
-			x: randomLeft ? randomPosition(document.documentElement.scrollWidth) : -400,
+			x: randomLeft ? randomPosition(document.documentElement.clientWidth) : -400,
 			el: makeCloud()
 		}
 
-		newCloud.el.style.top = randomPosition(document.documentElement.scrollHeight) + 'px'
+		newCloud.el.style.top = randomPosition(document.documentElement.clientHeight) + 'px'
 		newCloud.el.style.left = newCloud.x + 'px'
 		document.body.appendChild(newCloud.el)
 		clouds.push(newCloud)
