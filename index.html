@@ -44,7 +44,7 @@ function randomChoice(items) {
 	return items[randomInt(0, items.length-1)]
 }
 
-var PIXEL_SIZE = 50
+var PIXEL_SIZE = 25
 
 function makeCloud() {
 	var w = 8,
@@ -76,7 +76,7 @@ function randomPosition(max) {
 }
 
 function addCloud(randomLeft) {
-	var cloudiness = .3
+	var cloudiness = .8
 
 	if (Math.random() < cloudiness) {
 		newCloud = {
