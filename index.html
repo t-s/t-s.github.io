@@ -75,7 +75,7 @@ function randomPosition(max) {
 }
 
 function addCloud(randomLeft) {
-	var cloudiness = .8
+	var cloudiness = .3
 
 	if (Math.random() < cloudiness) {
 		newCloud = {
@@ -91,7 +91,7 @@ function addCloud(randomLeft) {
 }
 
 function animateClouds() {
-	var speed = 50
+	var speed = 25
 
 	addCloud()
 
